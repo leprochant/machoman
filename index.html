@@ -13,21 +13,15 @@
             overflow: auto; /* Permite el scroll vertical y horizontal si es necesario */
             background: black; /* Fondo negro para el área de scroll */
         }
-        .image-container {
-            width: 100%;
-            height: auto;
-        }
         img {
             display: block;
-            max-width: none; /* Permite que la imagen se expanda más allá del contenedor */
+            max-width: 100%; /* La imagen se ajusta al ancho del contenedor (viewport) */
             height: auto; /* Mantiene la proporción de la imagen */
-            width: 100%; /* Ajusta al ancho del contenedor */
+            margin: 0 auto; /* Centra la imagen horizontalmente */
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="Machoman$3.png" alt="Imagen a pantalla completa">
-    </div>
+    <img src="Machoman$3.png" alt="Imagen a pantalla completa">
 </body>
 </html>
