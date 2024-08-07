@@ -10,17 +10,17 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            overflow: hidden;
+            overflow: auto; /* Permite el scroll vertical si es necesario */
+            background: black; /* Fondo negro para el área de scroll */
         }
         img {
             display: block;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+            width: 100vw; /* Ancho completo de la pantalla */
+            height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
         }
     </style>
 </head>
 <body>
-    <img src="Machoman$3.png" alt="Imagen a pantalla completa">
+    <img src="nombre-de-tu-imagen.jpg" alt="Imagen a pantalla completa">
 </body>
 </html>
