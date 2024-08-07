@@ -15,10 +15,10 @@
         }
         img {
             display: block;
-            width: 100%; /* La imagen se ajusta al ancho del contenedor (viewport) */
-            height: auto; /* Mantiene la proporción de la imagen */
+            max-width: 100%; /* La imagen se ajusta al ancho del contenedor (viewport) */
             max-height: 100vh; /* La imagen no excederá el alto del viewport */
             margin: 0 auto; /* Centra la imagen horizontalmente */
+            object-fit: contain; /* Mantiene la proporción de la imagen */
         }
 
         /* Consultas de medios para ajustar la imagen en dispositivos móviles */
@@ -27,6 +27,7 @@
                 width: auto; /* Elimina el límite de ancho máximo */
                 height: 100vh; /* La imagen ocupa todo el alto del viewport */
                 max-height: none; /* Permite que la imagen exceda el alto del viewport si es necesario */
+                object-fit: contain; /* Mantiene la proporción de la imagen y evita el estiramiento */
                 margin: 0; /* Elimina el margen para el ajuste completo de la imagen */
             }
         }
