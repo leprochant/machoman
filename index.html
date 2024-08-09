@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagen a Pantalla Completa</title>
+    <title>Video de Fondo</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            overflow: auto; /* Permite el scroll vertical y horizontal si es necesario */
+            overflow: auto; /* Permite el scroll vertical */
             background: black; /* Fondo negro para el área de scroll */
+            cursor: pointer; /* Cambia el cursor a una mano para indicar clic */
         }
-        img {
-            display: block;
-            max-width: 100%; /* La imagen se ajusta al ancho del contenedor (viewport) */
-            height: auto; /* Mantiene la proporción de la imagen */
-            margin: 0 auto; /* Centra la imagen horizontalmente */
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+            z-index: -1; /* Envía el video al fondo */
+        }
+        .content {
+            position: relative;
+            height: 4046px; /* Ajusta al tamaño del video para asegurar el scroll */
         }
     </style>
 </head>
-<body>
-    <img src="fondo pagina.png" alt="Imagen a pantalla completa">
+<body onclick="window.location.href='https://opensea.io/collection/basedpunks'">
+    <video class="background-video" autoplay loop muted>
+        <source src="WEBIT’S-BRETT!_.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <!-- Aquí puedes agregar más contenido si es necesario -->
+    </div>
 </body>
 </html>
