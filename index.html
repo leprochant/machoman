@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video de Fondo</title>
+    <title>GIF de Fondo</title>
     <style>
         body, html {
             margin: 0;
@@ -11,32 +11,28 @@
             height: 100%;
             width: 100%;
             overflow: auto; /* Permite el scroll vertical */
-            background: black; /* Fondo negro para el área de scroll */
+            background: black; /* Fondo negro para el área de scroll, si el GIF no cubre todo */
             cursor: pointer; /* Cambia el cursor a una mano para indicar clic */
         }
-        .background-video {
+        .background-gif {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Asegura que el video cubra todo el contenedor */
-            z-index: -1; /* Envía el video al fondo */
+            object-fit: cover; /* Asegura que el GIF cubra todo el contenedor */
+            z-index: -1; /* Envía el GIF al fondo */
         }
         .content {
             position: relative;
-            height: 4046px; /* Ajusta al tamaño del video para asegurar el scroll */
+            min-height: 100vh; /* Asegura que el contenido mínimo tenga la altura de la ventana de visualización */
         }
     </style>
 </head>
 <body onclick="window.location.href='https://opensea.io/collection/basedpunks'">
-    <video class="background-video" autoplay loop muted>
-        <source src="WEBIT’S-BRETT!_.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <img class="background-gif" src="ezgif-3-01384f784d.gif" alt="Fondo">
     <div class="content">
         <!-- Aquí puedes agregar más contenido si es necesario -->
     </div>
 </body>
 </html>
-
